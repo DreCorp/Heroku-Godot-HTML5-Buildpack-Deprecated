@@ -3,7 +3,7 @@ function download_godot_headless() {
     #
     local VERSION=$1
     GODOT_HEADLESS_URL=https://downloads.tuxfamily.org/godotengine/${VERSION}/Godot_v${VERSION}-stable_linux_headless.64.zip
-    GODOT_HEADLESS_NAME=Godot_v${VERSION}-stable_linux_headless.64
+    GODOT_HEADLESS_NAME=godot_headless.64
     
     #
     if [ ! -f $CACHE_DIR/GODOT_HEADLESS_NAME ]; then
@@ -65,5 +65,5 @@ function export_godot_project() {
     # (The project must have a HTML5 export template setup)
     # source: $BUILD_DIR/dist
     # destinations: $OUTPUT_FILE
-    $CACHE_DIR/$GODOT_HEADLESS_NAME --path "$BUILD_DIR" --export-pack "HTML5" "$OUTPUT_FILE" || exit 1
+    $CACHE_DIR/godot_headless.64 --path "$BUILD_DIR" --export-pack "HTML5" "$OUTPUT_FILE" || exit 1
 }
