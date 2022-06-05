@@ -17,8 +17,7 @@ function download_godot_headless() {
     fi
     
     # copy godot headless executable
-    cp $CACHE_DIR/godot_headless.64 godot_headless.64
-    chmod +x ./godot_headless.64
+    cp $CACHE_DIR/godot_headless.64 $BUILD_DIR/godot_headless.64
     #
     output_section "Godot Headless setup done"
 }
@@ -64,5 +63,5 @@ function export_godot_project() {
     # (The project must have a HTML5 export template setup)
     # source: $BUILD_DIR/dist
     # destinations: $OUTPUT_FILE
-    ./godot_headless.64 --path "$BUILD_DIR" --export-pack "HTML5" "$OUTPUT_FILE" || exit 1
+    $BUILD_DIR/godot_headless.64 --path "$BUILD_DIR" --export-pack "HTML5" "$OUTPUT_FILE" || exit 1
 }
