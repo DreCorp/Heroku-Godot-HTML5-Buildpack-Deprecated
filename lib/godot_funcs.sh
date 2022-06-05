@@ -3,7 +3,6 @@ function download_godot_headless() {
     #
     local VERSION=$1
     GODOT_HEADLESS_URL=https://downloads.tuxfamily.org/godotengine/${VERSION}/Godot_v${VERSION}-stable_linux_headless.64.zip
-    GODOT_HEADLESS_NAME=godot_headless.64
     
     #
     if [ ! -f $CACHE_DIR/GODOT_HEADLESS_NAME ]; then
@@ -11,7 +10,7 @@ function download_godot_headless() {
         output_section "Downloading Godot Headless v$VERSION executable..."
         curl -s $GODOT_HEADLESS_URL -o godot-headless.zip || exit 1
         unzip -o godot-headless.zip
-        cp Godot_v${VERSION}-stable_linux_headless.64 $CACHE_DIR/GODOT_HEADLESS_NAME
+        cp Godot_v${VERSION}-stable_linux_headless.64 $CACHE_DIR/godot_headless.64
         touch "$CACHE_DIR/._sc_"
     else
         output_section "Using cached Godot v$VERSION Headless executable"
