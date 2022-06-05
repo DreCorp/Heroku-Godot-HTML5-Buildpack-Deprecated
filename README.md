@@ -1,6 +1,6 @@
 # Heroku Godot HTML5 client buildpack
 
-Heroku buildpack to deploy source and host Godot HTML5 builds.
+Heroku buildpack for continuous deploymentof Godot HTML5 builds.
 
 ## Resources used :
 - [3ddelano/heroku-buildpack-godot](https://github.com/3ddelano/heroku-buildpack-godot)

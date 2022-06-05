@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# BUILD_DIR will be the location of the app.
+
+# This script returns a YAML formatted hash with two keys:
+
+# addons is a list of default addons to install.
+# default_process_types is a hash of default Procfile entries.
+# This script will only be run if present.
+cat << EOF
+---
+default_process_types:
+  web: lib/start $PORT
+EOF

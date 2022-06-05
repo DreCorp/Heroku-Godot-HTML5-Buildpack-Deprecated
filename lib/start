@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+PORT=${1:-${PORT:-3000}}
+
+# start a python server in the dist folder
+(cd dist && python -m http.server $PORT)
