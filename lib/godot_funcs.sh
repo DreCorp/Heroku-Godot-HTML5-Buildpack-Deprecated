@@ -48,11 +48,11 @@ function download_godot_templates() {
 function export_godot_project() {
     #
     OUTPUT_DEST="$BUILD_DIR/dist"
-    FILE_NAME="index.html"
+    FILE_NAME="$OUTPUT_DEST/index.html"
     
     #
     output_section "Exporting Godot Project..."
-    output_line "Target: '$OUPUT_DEST/$FILE_NAME'"
+    output_line "Target: '$FILE_NAME'"
     
     # create folders
     mkdir -p $OUTPUT_DEST
@@ -60,5 +60,5 @@ function export_godot_project() {
     # (The project must have a HTML5 export template setup)
     # source: $BUILD_DIR/dist
     # destinations: $OUTPUT_FILE
-    $CACHE_DIR/godot_headless.64 --path $BUILD_DIR --export-pack "HTML5" $OUTPUT_DEST/index.html || exit 1
+    $CACHE_DIR/godot_headless.64 --path "$OUTPUT_DEST" --export-pack "HTML5" "index.html" || exit 1
 }
