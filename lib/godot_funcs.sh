@@ -5,7 +5,7 @@ function download_godot_headless() {
     GODOT_HEADLESS_URL=https://downloads.tuxfamily.org/godotengine/${VERSION}/Godot_v${VERSION}-stable_linux_headless.64.zip
     
     #
-    if [ ! -f $CACHE_DIR/GODOT_HEADLESS_NAME ]; then
+    if [ ! -f $CACHE_DIR/godot_headless.64 ]; then
         #
         output_section "Downloading Godot Headless v$VERSION executable..."
         curl -s $GODOT_HEADLESS_URL -o godot-headless.zip || exit 1
@@ -15,9 +15,6 @@ function download_godot_headless() {
     else
         output_section "Using cached Godot v$VERSION Headless executable"
     fi
-    
-    # copy godot headless executable
-    cp $CACHE_DIR/godot_headless.64 $BUILD_DIR/godot_headless.64
     #
     output_section "Godot Headless setup done"
 }
@@ -51,7 +48,6 @@ function download_godot_templates() {
 function export_godot_project() {
     #
     OUTPUT_DEST="$BUILD_DIR/dist"
-    OUTPUT_FILE="$OUTPUT_DEST/index.html"
     
     #
     output_section "Exporting Godot Project..."
@@ -63,5 +59,5 @@ function export_godot_project() {
     # (The project must have a HTML5 export template setup)
     # source: $BUILD_DIR/dist
     # destinations: $OUTPUT_FILE
-    $BUILD_DIR/godot_headless.64 --path "$BUILD_DIR" --export-pack "HTML5" "$OUTPUT_FILE" || exit 1
+    $BUILD_DIR/godot_headless.64 --path "$BUILD_DIR" --export-pack "HTML5" "$OUTPUT_DEST/index.html" || exit 1
 }

@@ -9,5 +9,5 @@
 cat << EOF
 ---
 default_process_types:
-  web: lib/start $PORT
+  web: cd dist/ && python -m http.server \$PORT
 EOF

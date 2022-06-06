@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-PORT=${1:-${PORT:-3000}}
-
-# start a python server in the dist folder
-python3 -m http.server $PORT --directory dist
