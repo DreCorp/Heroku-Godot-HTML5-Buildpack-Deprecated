@@ -60,5 +60,5 @@ function export_godot_project() {
     # (The project must have a HTML5 export template setup)
     # source: $BUILD_DIR/dist
     # destinations: $OUTPUT_FILE
-    $CACHE_DIR/godot_headless.64 --path "$OUTPUT_DEST" --export "HTML5" "index.html" || exit 1
+    $CACHE_DIR/godot_headless.64 --path "$OUTPUT_DEST" --export "HTML5" index.html || exit 1
 }
