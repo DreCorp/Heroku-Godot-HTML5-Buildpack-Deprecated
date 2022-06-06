@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+PORT=${1:-${PORT:-3000}}
+echo(${PORT})
+(python3 -m http.server ${PORT} --directory "dist")
