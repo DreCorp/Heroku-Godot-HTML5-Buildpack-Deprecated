@@ -4,9 +4,9 @@
 # bin/compile BUILD_DIR CACHE_DIR ENV_DIR
 
 # The contents of CACHE_DIR will be persisted between builds. 
-# You can cache the results of long processes like dependency resolution here 
-# to speed up future builds.
+# You can cache the results of long processes like dependency resolution here to speed up future builds.
 
+#
 BASEDIR=$(dirname $(dirname "$0"))
 BUILD_DIR=$1
 CACHE_DIR=$2

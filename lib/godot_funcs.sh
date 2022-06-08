@@ -54,11 +54,12 @@ function export_godot_project() {
     output_section "Exporting Godot Project..."
     output_line "Target: '$FILE_NAME'"
     
-    # create folders
+    # create necessary folders
     mkdir -p $OUTPUT_DEST
-    # Export the project to HTML5 
-    # (The project must have a HTML5 export template setup)
-    # source: $BUILD_DIR/dist
+
+    # Here you can copy any content that you need, perhaps even use a separate script for that
+
+    # Export Godot project to HTML5(must have a HTML5 export template setup)
     # destinations: $OUTPUT_FILE
     $CACHE_DIR/godot_headless.64 --path "$BUILD_DIR" --export "HTML5" "$FILE_NAME" || exit 1
 }

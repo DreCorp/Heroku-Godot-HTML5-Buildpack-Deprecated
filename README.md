@@ -7,7 +7,7 @@ Heroku buildpack for continuous deployment of Godot HTML5 builds.
 - [lethiandev/heroku-buildpack-godot](https://github.com/lethiandev/heroku-buildpack-godot)
 ## Features:
 - Deploy [Godot](https://https://godotengine.org/) HTML5 source code to [Heroku](https://heroku.com).
-- Serve it up.
+- Serve it up with [Python](https://docs.python.org/3/library/http.server.html).
 
 ## ENV vars:
 - PORT
