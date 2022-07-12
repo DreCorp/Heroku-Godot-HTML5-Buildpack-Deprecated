@@ -8,9 +8,12 @@ function download_godot_headless() {
     if [ ! -f $CACHE_DIR/godot_headless.64 ]; then
         #
         output_section "Downloading Godot Headless v$VERSION executable..."
+
         curl -s $GODOT_HEADLESS_URL -o godot-headless.zip || exit 1
         unzip -o godot-headless.zip
         cp Godot_v${VERSION}-stable_linux_headless.64 $CACHE_DIR/godot_headless.64
+
+        # set 'self-contained' mode
         touch "$CACHE_DIR/._sc_"
     else
         output_section "Using cached Godot v$VERSION Headless executable"
