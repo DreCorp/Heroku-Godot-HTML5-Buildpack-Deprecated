@@ -1,4 +1,13 @@
-# Heroku Godot HTML5 buildpack
+# **Heroku Godot HTML5 buildpack - DEPRECATED**
+
+
+## :no_entry_sign: This repo is no longer maintained or supported! :no_entry_sign:
+
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)
+
+---
+
+
 
 ### Heroku buildpack for continuous deployment of Godot HTML5 builds.
 ---
